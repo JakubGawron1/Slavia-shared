@@ -1,0 +1,6 @@
+node_modules/
+dist/
+scripts/.extract-exercises-tmp.mts
+dart/.dart_tool/
+dart/build/
+dart/.packages

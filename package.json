@@ -1,0 +1,35 @@
+{
+  "name": "@slavia/shared",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Shared contracts, data catalogs and pure logic for Slavia web (Nuxt) and mobile (Flutter).",
+  "exports": {
+    ".": "./src/index.ts",
+    "./sinclair": "./src/logic/sinclair.ts",
+    "./sinclair-athlete": "./src/logic/sinclairAthlete.ts",
+    "./barbell-path": "./src/logic/barbellPathAnalysis.ts",
+    "./weightlifting-ratios": "./src/logic/weightliftingRatios.ts",
+    "./pzpc-weight-categories": "./src/logic/pzpcWeightCategories.ts",
+    "./badge-helpers": "./src/logic/badgeHelpers.ts",
+    "./data/theme-presets.json": "./data/theme-presets.json",
+    "./data/athlete-badges.json": "./data/athlete-badges.json",
+    "./data/pzpc-weight-classes.json": "./data/pzpc-weight-classes.json",
+    "./data/brand-defaults.json": "./data/brand-defaults.json",
+    "./data/weightlifting-exercises.json": "./data/weightlifting-exercises.json",
+    "./openapi/openapi.json": "./openapi/openapi.json"
+  },
+  "scripts": {
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "openapi:sync": "node scripts/sync-openapi-from-backend.mjs",
+    "data:extract-exercises": "node scripts/extract-weightlifting-exercises.mjs",
+    "dart:sync-assets": "node scripts/sync-dart-assets.mjs",
+    "prepare": "node scripts/sync-dart-assets.mjs"
+  },
+  "devDependencies": {
+    "tsx": "^4.22.4",
+    "typescript": "^6.0.3",
+    "vitest": "^3.2.4"
+  }
+}
