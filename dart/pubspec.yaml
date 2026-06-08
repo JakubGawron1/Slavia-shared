@@ -1,0 +1,20 @@
+name: slavia_shared
+description: Shared Slavia catalogs and pure logic for Flutter (parity with @slavia/shared).
+version: 1.0.0
+publish_to: 'none'
+
+environment:
+  sdk: ^3.9.2
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+flutter:
+  assets:
+    - assets/
+    - assets/test-vectors/
