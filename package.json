@@ -6,6 +6,7 @@
   "description": "Shared contracts, data catalogs and pure logic for Slavia web (Nuxt) and mobile (Flutter).",
   "exports": {
     ".": "./src/index.ts",
+    "./markdown-inline": "./src/logic/markdownInline.ts",
     "./sinclair": "./src/logic/sinclair.ts",
     "./sinclair-athlete": "./src/logic/sinclairAthlete.ts",
     "./barbell-path": "./src/logic/barbellPathAnalysis.ts",

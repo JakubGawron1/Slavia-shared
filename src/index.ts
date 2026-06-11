@@ -1,3 +1,4 @@
+export * from './logic/markdownInline'
 export * from './logic/sinclair'
 export * from './logic/sinclairAthlete'
 export * from './logic/barbellPathAnalysis'
