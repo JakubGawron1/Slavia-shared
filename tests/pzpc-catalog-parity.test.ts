@@ -27,4 +27,13 @@ describe('pzpc catalog parity JSON ↔ TS', () => {
     const tsLabels = pzpcWeightClassLabels('U17', 'female')
     expect(tsLabels).toEqual(jsonU17Female)
   })
+
+  it('all age groups and genders match JSON catalog', () => {
+    for (const group of PZPC_AGE_GROUPS) {
+      for (const gender of ['male', 'female'] as const) {
+        const jsonLabels = data.classesByAge[group.id]?.[gender] ?? []
+        expect(pzpcWeightClassLabels(group.id, gender)).toEqual(jsonLabels)
+      }
+    }
+  })
 })
