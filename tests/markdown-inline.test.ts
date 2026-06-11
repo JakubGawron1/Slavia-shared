@@ -14,4 +14,10 @@ describe('markdownInline', () => {
     expect(html).toContain('<code')
     expect(html).toContain('href="https://x.pl"')
   })
+
+  it('renders underscore bold and italic variants', () => {
+    const html = renderMarkdownInline('__wide__ _narrow_')
+    expect(html).toContain('<strong>wide</strong>')
+    expect(html).toContain('<em>narrow</em>')
+  })
 })
