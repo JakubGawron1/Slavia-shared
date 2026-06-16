@@ -2,6 +2,6 @@
 abstract final class SlaviaBrandDefaults {
   SlaviaBrandDefaults._();
 
-  static const String apiBase = 'https://slavia-backend.onrender.com';
+  static const String apiBase = 'https://jakubgawron1-slavia-backend.hf.space';
   static const String webUrl = 'https://cksslavia.vercel.app';
 }
