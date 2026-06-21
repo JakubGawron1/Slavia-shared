@@ -264,6 +264,22 @@
         }
       }
     },
+    "/api/athletes/me/dashboard": {
+      "get": {
+        "summary": "GET /api/athletes/me/dashboard",
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          }
+        }
+      }
+    },
     "/api/athletes/my-calendar": {
       "get": {
         "summary": "GET /api/athletes/my-calendar",
@@ -542,6 +558,27 @@
             "description": "Forbidden"
           }
         }
+      }
+    },
+    "/api/trainer/dashboard": {
+      "get": {
+        "summary": "GET /api/trainer/dashboard",
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          }
+        },
+        "security": [
+          {
+            "BearerAuth": []
+          }
+        ]
       }
     },
     "/api/admins/grouped": {
@@ -2995,27 +3032,6 @@
         ]
       }
     },
-    "/api/system/gdrive-status": {
-      "get": {
-        "summary": "GET /api/system/gdrive-status",
-        "responses": {
-          "200": {
-            "description": "OK"
-          },
-          "401": {
-            "description": "Unauthorized"
-          },
-          "403": {
-            "description": "Forbidden"
-          }
-        },
-        "security": [
-          {
-            "BearerAuth": []
-          }
-        ]
-      }
-    },
     "/api/system/calendar/export/{id}": {
       "get": {
         "summary": "GET /api/system/calendar/export/{id}",
@@ -3287,6 +3303,27 @@
         ]
       }
     },
+    "/api/system/role-preview/athlete-dashboard/{user_id}": {
+      "get": {
+        "summary": "GET /api/system/role-preview/athlete-dashboard/{user_id}",
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          }
+        },
+        "security": [
+          {
+            "BearerAuth": []
+          }
+        ]
+      }
+    },
     "/api/system/role-preview/athlete-profile/{user_id}": {
       "get": {
         "summary": "GET /api/system/role-preview/athlete-profile/{user_id}",
@@ -3530,224 +3567,6 @@
             "description": "Forbidden"
           }
         }
-      }
-    },
-    "/api/board/documents/": {
-      "get": {
-        "summary": "GET /api/board/documents/",
-        "responses": {
-          "200": {
-            "description": "OK"
-          },
-          "401": {
-            "description": "Unauthorized"
-          },
-          "403": {
-            "description": "Forbidden"
-          }
-        },
-        "security": [
-          {
-            "BearerAuth": []
-          }
-        ]
-      }
-    },
-    "/api/board/documents/save": {
-      "post": {
-        "summary": "POST /api/board/documents/save",
-        "responses": {
-          "200": {
-            "description": "OK"
-          },
-          "201": {
-            "description": "Created"
-          },
-          "401": {
-            "description": "Unauthorized"
-          },
-          "403": {
-            "description": "Forbidden"
-          }
-        },
-        "security": [
-          {
-            "BearerAuth": []
-          }
-        ]
-      }
-    },
-    "/api/board/documents/delete": {
-      "post": {
-        "summary": "POST /api/board/documents/delete",
-        "responses": {
-          "200": {
-            "description": "OK"
-          },
-          "201": {
-            "description": "Created"
-          },
-          "401": {
-            "description": "Unauthorized"
-          },
-          "403": {
-            "description": "Forbidden"
-          }
-        },
-        "security": [
-          {
-            "BearerAuth": []
-          }
-        ]
-      }
-    },
-    "/api/board/documents/generate": {
-      "post": {
-        "summary": "POST /api/board/documents/generate",
-        "responses": {
-          "200": {
-            "description": "OK"
-          },
-          "201": {
-            "description": "Created"
-          },
-          "401": {
-            "description": "Unauthorized"
-          },
-          "403": {
-            "description": "Forbidden"
-          }
-        },
-        "security": [
-          {
-            "BearerAuth": []
-          }
-        ]
-      }
-    },
-    "/api/board/documents/document-types": {
-      "get": {
-        "summary": "GET /api/board/documents/document-types",
-        "responses": {
-          "200": {
-            "description": "OK"
-          },
-          "401": {
-            "description": "Unauthorized"
-          },
-          "403": {
-            "description": "Forbidden"
-          }
-        },
-        "security": [
-          {
-            "BearerAuth": []
-          }
-        ]
-      },
-      "post": {
-        "summary": "POST /api/board/documents/document-types",
-        "responses": {
-          "200": {
-            "description": "OK"
-          },
-          "201": {
-            "description": "Created"
-          },
-          "401": {
-            "description": "Unauthorized"
-          },
-          "403": {
-            "description": "Forbidden"
-          }
-        },
-        "security": [
-          {
-            "BearerAuth": []
-          }
-        ]
-      }
-    },
-    "/api/board/documents/{id}": {
-      "get": {
-        "summary": "GET /api/board/documents/{id}",
-        "responses": {
-          "200": {
-            "description": "OK"
-          },
-          "401": {
-            "description": "Unauthorized"
-          },
-          "403": {
-            "description": "Forbidden"
-          }
-        },
-        "security": [
-          {
-            "BearerAuth": []
-          }
-        ]
-      }
-    },
-    "/api/board/documents/{id}/content": {
-      "get": {
-        "summary": "GET /api/board/documents/{id}/content",
-        "responses": {
-          "200": {
-            "description": "OK"
-          },
-          "401": {
-            "description": "Unauthorized"
-          },
-          "403": {
-            "description": "Forbidden"
-          }
-        },
-        "security": [
-          {
-            "BearerAuth": []
-          }
-        ]
-      },
-      "patch": {
-        "summary": "PATCH /api/board/documents/{id}/content",
-        "responses": {
-          "200": {
-            "description": "OK"
-          },
-          "401": {
-            "description": "Unauthorized"
-          },
-          "403": {
-            "description": "Forbidden"
-          }
-        },
-        "security": [
-          {
-            "BearerAuth": []
-          }
-        ]
-      }
-    },
-    "/api/board/documents/{id}/preview": {
-      "get": {
-        "summary": "GET /api/board/documents/{id}/preview",
-        "responses": {
-          "200": {
-            "description": "OK"
-          },
-          "401": {
-            "description": "Unauthorized"
-          },
-          "403": {
-            "description": "Forbidden"
-          }
-        },
-        "security": [
-          {
-            "BearerAuth": []
-          }
-        ]
       }
     },
     "/api/ai/coach/status": {
